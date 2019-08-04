@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 import matplotlib.patches as mpatches
 
-# Importing Table Req to create graph
-EPL_set =pd.read_csv('https://drive.google.com/uc?export=download&id=1TcA1Aspas3z3Nc-288IRcNB741Xl14Nv')
+path = 'scripts/Seasonresults/EPL_Set.csv'
+EPL_set =pd.read_csv(path)
 
 List_of_teams = set(EPL_set['HomeTeam'].values)
 dic_of_wins= {el:0 for el in List_of_teams}
@@ -17,7 +17,7 @@ dic_of_losses={el:0 for el in List_of_teams}
 dic_of_draws={el:0 for el in List_of_teams}
 
 # Updating dictionary as per wins losses and draws
-with open('EPL_Set.csv','r') as file:
+with open(path,'r') as file:
   data =csv.reader(file)
   header= next(data)
   for row in data:
@@ -100,4 +100,4 @@ plt.axvline(x= 800,ymax = 0.96,color = 'black',linewidth = 0.5, alpha =0.5)
 # set the spines position
 ax.spines['bottom'].set_position(('axes', 0))
 ax.spines['left'].set_position(('axes', 0.015))
-plt.savefig('hist2.png', dpi=300, bbox_inches='tight')
+# plt.savefig('hist2.png', dpi=300, bbox_inches='tight')

@@ -50,20 +50,20 @@ def image_plot(counts, images, spacing=0, X_label='x', Y_label='y',Title = 'Titl
     plt.savefig('ass.png', dpi=300, bbox_inches='tight')
 
 # Importing Table Req to create graph
-df = pd.read_csv('/home/arshreality/Downloads/winners.csv')
+df = pd.read_csv('scripts/Seasonresults/winners.csv')
 
 # Assign label names for plotting
 X_label1 = 'Years'
 Y_label1 = 'Premier League Wins'
 Title1 = 'Total Premier League Wins by Team and Year'
-
+path = 'scripts/logos'
 # Read in logo images and set them to equal sqaures
-man_united_logo = cv2.resize(imread('/home/arshreality/Downloads/logos/mu.png'), (400, 400))
-man_city_logo = cv2.resize(imread('/home/arshreality/Downloads/logos/mc.png'), (400, 400))
-chelsea_logo = cv2.resize(imread('/home/arshreality/Downloads/logos/c.png'), (400, 400))
-arsenal_logo = cv2.resize(imread('/home/arshreality/Downloads/logos/a.png'), (400, 400))
-leicester_logo = cv2.resize(imread('/home/arshreality/Downloads/logos/lc.png'), (400, 400))
-blackburn_logo = cv2.resize(imread('/home/arshreality/Downloads/logos/br.png'), (400, 400))
+man_united_logo = cv2.resize(imread(path + '/mu.png'), (400, 400))
+man_city_logo = cv2.resize(imread(path +'/mc.png'), (400, 400))
+chelsea_logo = cv2.resize(imread(path +'/c.png'), (400, 400))
+arsenal_logo = cv2.resize(imread(path +'/a.png'), (400, 400))
+leicester_logo = cv2.resize(imread(path +'/lc.png'), (400, 400))
+blackburn_logo = cv2.resize(imread(path +'/br.png'), (400, 400))
 
 # Convert each column of dataframe to lists for plotting
 count = df['Count'].tolist()
