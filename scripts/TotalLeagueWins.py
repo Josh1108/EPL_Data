@@ -47,7 +47,7 @@ def image_plot(counts, images, spacing=0, X_label='x', Y_label='y',Title = 'Titl
     plt.xlabel(X_label)
     plt.ylabel(Y_label)
     plt.title(Title)
-    plt.savefig('ass.png', dpi=300, bbox_inches='tight')
+    plt.savefig('league_wins.png', dpi=300, bbox_inches='tight')
 
 # Importing Table Req to create graph
 df = pd.read_csv('scripts/Seasonresults/winners.csv')
