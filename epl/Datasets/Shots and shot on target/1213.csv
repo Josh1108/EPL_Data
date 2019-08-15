@@ -1,4 +1,4 @@
-team,total+AF8-shots,total+AF8-on+AF8-target,shot+AF8-acc
+team,total_shots,total_on_target,shot_acc
 Arsenal,597,326,54.606365159129
 Aston Villa,438,225,51.3698630136986
 Chelsea,626,336,53.6741214057508

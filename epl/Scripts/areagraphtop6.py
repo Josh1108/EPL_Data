@@ -6,7 +6,7 @@ mpl.style.use('ggplot') # optional: for ggplot-like style
 import pandas as pd
 import glob
 
-path = r'/home/arshreality/Desktop/epl/Datasets/Transposed shot accuracy top 6' # use your path
+path = r'/home/arshreality/Desktop/EPL_Data/epl/Datasets/Transposed shot accuracy top 6' # use your path
 all_files = glob.glob(path + "/*.csv")
 
 li = []
@@ -30,5 +30,5 @@ plt.title('Shot accuracy for six teams to never get relegated from 2000-2019')
 plt.show()
 plt.draw()
 
-fig1.savefig('/home/arshreality/Desktop/epl/Images/shot_acc_for_test.png', dpi=300,bbox_inches = 'tight')
+fig1.savefig('/home/arshreality/Desktop/EPL_Data/epl/Images/shot_acc_for_test.png', dpi=300,bbox_inches = 'tight')
 # plt.savefig('/home/arshreality/Desktop/epl/Images/shot_acc_for_20{0}-{1}.png'.format(x,y), dpi=300, bbox_inches='tight')
