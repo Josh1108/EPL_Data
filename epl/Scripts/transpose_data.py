@@ -28,5 +28,5 @@ while True:
     x = int(x)
     y = int(y)
     print(x,y)
-    if x == 0:
+    if x == 7:
         break

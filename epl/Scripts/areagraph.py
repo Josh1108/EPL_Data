@@ -19,11 +19,9 @@ while True:
     plt.ylabel("Shot Accuracy %")
     plt.title('Shot accuracy for every team in 20{0}-{1}'.format(x,y))
     fig1 = plt.gcf()
-    # plt.show()
+    plt.show()
     fig1.savefig('/home/arshreality/Desktop/EPL_Data/epl/Images/shot_acc_for_20{0}-{1}.png'.format(x,y), dpi=300, bbox_inches='tight')
     x = int(x)
     y = int(y)
-    x
-    y
-    if x == 0:
+    if x == 7:
         break
