@@ -13,13 +13,14 @@ for team in df['HomeTeam'].unique():
 
 df['scoredhome'] = df.groupby('HomeTeam')['FTHG'].cumsum()
 df['scoredaway'] = df.groupby('AwayTeam')['FTAG'].cumsum()
-df
 df['concededhome'] = df.groupby('HomeTeam')['FTAG'].cumsum()
 df['concededaway'] = df.groupby('AwayTeam')['FTHG'].cumsum()
-##### print(df['HomeTeam'].unique())
+df['winshome'] = df.groupby('HomeTeam')['HomeResult'].cumsum()
+df['winsaway'] = df.groupby('AwayTeam')['AwayResult'].cumsum()
+df
 
-df.rename(index = {"shot_acc": "20{0}-{1}".format(x,y),}, inplace = True)
-df.to_csv('/home/arshreality/Desktop/EPL_Data/epl/Datasets/Transposed shot accuracy top 6/{0}{1}newnew.csv'.format(x,y), sep=',', encoding='utf-8',index_label = 'team', index = True)
+df = df[::-1]
+df.to_csv('/home/arshreality/Desktop/EPL_Data/epl/Datasets/E0.csv', sep=',', encoding='utf-8',index_label = 'team', index = True)
     # x = int(x)
     # y = int(y)
     # print(x,y)
